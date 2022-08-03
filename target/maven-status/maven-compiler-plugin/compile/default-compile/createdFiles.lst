@@ -1,0 +1,4 @@
+com\brimmatech\dao\ValidatingService.class
+com\brimmatech\servlet\RegistrationServlet.class
+com\brimmatech\dao\DatabaseConnection.class
+com\brimmatech\dao\Registration.class
