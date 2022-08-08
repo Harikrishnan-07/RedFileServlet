@@ -13,21 +13,20 @@ public class FileHistoryCollector {
 
         List<FileHistoryClass> list = new LinkedList<>();
         Connection connection = DatabaseConnection.initializeDatabase();
-
-        PreparedStatement statement = connection.prepareStatement("Select * from uploadhistory where email=?");
+//        String status = "" ;
+        PreparedStatement statement = connection.prepareStatement("Select * from uploadhistory where email=? ");
         statement.setString(1, email);
+//        statement.setString(2,status);
         ResultSet resultSet = statement.executeQuery();
 
         while (resultSet.next()) {
             FileHistoryClass fileHistoryClass = new FileHistoryClass();
-            fileHistoryClass.setEmail(resultSet.getString("email"));
+             fileHistoryClass.setEmail(resultSet.getString("email"));
             fileHistoryClass.setDate(resultSet.getString("date"));
             fileHistoryClass.setDocumentName(resultSet.getString("documentname"));
+            fileHistoryClass.setFilesize(resultSet.getString("documentsize"));
             list.add(fileHistoryClass);
-
         }
-
-
         return list;
     }
 

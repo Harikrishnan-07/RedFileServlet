@@ -31,4 +31,24 @@ public class FileHistoryClass {
     private String documentName;
 
 
+
+    public void setFilesize(String filesize) {
+        this.filesize = filesize;
+    }
+
+    private String filesize;
+
+private String status;
+
+    public String getFilesize() {
+        return filesize;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

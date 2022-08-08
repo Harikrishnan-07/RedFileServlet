@@ -8,18 +8,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HistoryUpdator {
-    public void updatingHistory(String email, String filename) throws SQLException, ClassNotFoundException, IOException {
+    public void updatingHistory(String email, String filename, String size) throws SQLException, ClassNotFoundException, IOException {
 
         Connection connection = DatabaseConnection.initializeDatabase();
+
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
         String newdate = formatter.format(date);
-        System.out.println(email);
-        PreparedStatement statement = connection.prepareStatement("Insert into uploadhistory (email,date,documentname) values(?,?,?)");
+
+        PreparedStatement statement = connection.prepareStatement("Insert into uploadhistory (email,date,documentname,documentsize) values(?,?,?,?)");
         statement.setString(1, email);
         statement.setString(2, newdate);
         statement.setString(3, filename);
+        statement.setString(4, size);
         statement.executeUpdate();
+
     }
 }
 
