@@ -3,6 +3,7 @@ package com.brimmatech.servlet;
 import com.brimmatech.dao.Registration;
 import com.brimmatech.dao.ValidatingService;
 import com.google.gson.Gson;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -22,40 +23,37 @@ public class RegistrationServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-      //  response.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-
         BufferedReader br = request.getReader();
         StringBuilder builder = new StringBuilder();
         String line;
-               while ((line = br.readLine()) != null) {
-                    builder.append(line).append("\n");
-                }
+        while ((line = br.readLine()) != null) {
+            builder.append(line).append("\n");
+        }
 
-             ValidatingService validatingService = new ValidatingService();
-             Registration register = new Registration();
-            try {
-                if (validatingService.validate(builder.toString())){
-                    String users = "true";
-                    String userJsonString = this.gson.toJson(users);
-                    System.out.println("true");
-                    PrintWriter out = response.getWriter();
-                    response.setContentType("application/json");
-                    response.setCharacterEncoding("UTF-8");
-                    out.print(userJsonString);
-                    out.flush();
-                } else {
-                    register.gettingDetail(builder.toString());
-                    String user = "false";
-                    String userJsonString = this.gson.toJson(user);
-                    System.out.println("false");
-                    PrintWriter out = response.getWriter();
-                    response.setContentType("application/json");
-                    response.setCharacterEncoding("UTF-8");
-                    out.print(userJsonString);
-                    out.flush();
-                }
-            } catch (ClassNotFoundException | SQLException e) {
-                throw new RuntimeException(e);
+        ValidatingService validatingService = new ValidatingService();
+        Registration register = new Registration();
+        try {
+            if (validatingService.validate(builder.toString())) {
+                String users = "true";
+                String userJsonString = this.gson.toJson(users);
+                System.out.println("true");
+                PrintWriter out = response.getWriter();
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                out.print(userJsonString);
+                out.flush();
+            } else {
+                register.gettingDetail(builder.toString());
+                String user = "false";
+                String userJsonString = this.gson.toJson(user);
+                PrintWriter out = response.getWriter();
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                out.print(userJsonString);
+                out.flush();
             }
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
