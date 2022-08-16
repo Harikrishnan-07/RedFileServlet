@@ -9,5 +9,9 @@ com\brimmatech\dao\Registration.class
 com\brimmatech\servlet\FileUploaderServlet.class
 com\brimmatech\dao\PaymentUpdator.class
 com\brimmatech\dao\HistoryUpdator.class
+com\brimmatech\dao\RedfileUploader.class
 com\brimmatech\servlet\FileHistoryServlet.class
+com\brimmatech\servlet\ProceesedFileHistoryServlet.class
+com\brimmatech\dao\FileDeletor.class
+com\brimmatech\dao\PaymentHistoryUpdator.class
 com\brimmatech\servlet\PaymentUpdatorServlet.class

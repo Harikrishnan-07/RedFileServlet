@@ -2,7 +2,7 @@ package com.brimmatech.servlet;
 
 
 import com.brimmatech.dao.HistoryUpdator;
-import com.google.gson.JsonObject;
+
 
 
 import javax.servlet.ServletException;
@@ -26,36 +26,46 @@ public class FileUploaderServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-
-//        InputStream inputStream = request.getInputStream();
-
-//
-//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//
 //        StringBuilder builder = new StringBuilder();
+//        BufferedReader bufferedReader = request.getReader();
 //        String line;
 //
 //        while ((line = bufferedReader.readLine()) != null) {
 //            builder.append(line).append("\n");
 //        }
+//        try{
 //        System.out.println(builder.toString());
-//
-        String email = request.getParameter("email");
-        String foldername = email.substring(0, email.lastIndexOf("."));
-        String status = "Not paid";
+//        JSONObject object = new JSONObject(builder.toString());
 
+        String email = request.getParameter("email");
+        System.out.println(email);
         Part part = request.getPart("file");
 
-        double length = part.getSize();
-        double megabyte = length / (1024 * 1024);
-        DecimalFormat df = new DecimalFormat("#.##");
-        df.setRoundingMode(RoundingMode.CEILING);
-        double megabyte1 = Double.parseDouble(df.format(megabyte));
-        System.out.println(part.getSize());
-        String size = String.valueOf(megabyte1).concat(" MB");
-        String name = part.getSubmittedFileName();
+        // System.out.println(part.length());
+//            String email = object.getString("mail");
+//            System.out.println(email);
+
+
+        //Part part = (Part) object.get("data");
+        // Part part = request.getPart("data");
+
+
+        //     System.out.println(part);
 
         try {
+            String foldername = email.substring(0, email.lastIndexOf("."));
+            String status = "Not paid";
+
+            double length = part.getSize();
+            double megabyte = length / (1024 * 1024);
+            DecimalFormat df = new DecimalFormat("#.##");
+            df.setRoundingMode(RoundingMode.CEILING);
+            double megabyte1 = Double.parseDouble(df.format(megabyte));
+            System.out.println(part.getSize());
+            String size = String.valueOf(megabyte1).concat(" MB");
+            String name = part.getSubmittedFileName();
+            System.out.println(part.getSubmittedFileName());
+
             InputStream input = part.getInputStream();
             BufferedInputStream buffer = new BufferedInputStream(input);
             String path = ("C:/Uploadedfiles/" + foldername);
@@ -73,11 +83,15 @@ public class FileUploaderServlet extends HttpServlet {
 
             HistoryUpdator historyUpdator = new HistoryUpdator();
             historyUpdator.updatingHistory(email, name, size, status);
+
+
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         } catch (ClassNotFoundException ex) {
             throw new RuntimeException(ex);
-        }
-    }
 
+
+        }
+
+    }
 }
