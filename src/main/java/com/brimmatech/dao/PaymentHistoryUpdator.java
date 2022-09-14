@@ -14,11 +14,10 @@ public class PaymentHistoryUpdator {
         List<FileHistoryClass> list = new LinkedList<>();
         String status = "Success";
         PreparedStatement preparedStatement = connection.prepareStatement("Select * from uploadhistory where email=? and status=?");
-        preparedStatement.setString(1,email);
-        preparedStatement.setString(2,status);
+        preparedStatement.setString(1, email);
+        preparedStatement.setString(2, status);
         ResultSet resultSet = preparedStatement.executeQuery();
-        while(resultSet.next())
-        {
+        while (resultSet.next()) {
             FileHistoryClass fileHistoryClass = new FileHistoryClass();
             fileHistoryClass.setEmail(resultSet.getString("email"));
             fileHistoryClass.setDate(resultSet.getString("paymentdate"));
@@ -29,7 +28,7 @@ public class PaymentHistoryUpdator {
 
         }
 
-     return list;
+        return list;
     }
 
 

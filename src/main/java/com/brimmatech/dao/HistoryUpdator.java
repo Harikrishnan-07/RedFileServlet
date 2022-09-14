@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HistoryUpdator {
-    public void updatingHistory(String email, String filename, String size,String status) throws SQLException, ClassNotFoundException, IOException {
+    public void updatingHistory(String email, String filename, String size, String status) throws SQLException, ClassNotFoundException, IOException {
 
         Connection connection = DatabaseConnection.initializeDatabase();
 
@@ -21,7 +21,7 @@ public class HistoryUpdator {
         statement.setString(2, newdate);
         statement.setString(3, filename);
         statement.setString(4, size);
-        statement.setString(5,status);
+        statement.setString(5, status);
         statement.executeUpdate();
 
     }

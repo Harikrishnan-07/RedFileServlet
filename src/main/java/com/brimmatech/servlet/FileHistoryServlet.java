@@ -14,7 +14,6 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
-
 @WebServlet("/filehistory")
 public class FileHistoryServlet extends HttpServlet {
     private Gson gson = new Gson();
@@ -35,7 +34,7 @@ public class FileHistoryServlet extends HttpServlet {
             request.setAttribute("list", list);
 
             String userJsonString = this.gson.toJson(list);
-            PrintWriter out = response.getWriter();
+           PrintWriter out = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
             out.print(userJsonString);

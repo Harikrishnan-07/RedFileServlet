@@ -1,6 +1,7 @@
 package com.brimmatech.servlet;
 
 
+import com.brimmatech.dao.FilesUploadtoRedfile;
 import com.brimmatech.dao.HistoryUpdator;
 
 
@@ -26,31 +27,10 @@ public class FileUploaderServlet extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-//        StringBuilder builder = new StringBuilder();
-//        BufferedReader bufferedReader = request.getReader();
-//        String line;
-//
-//        while ((line = bufferedReader.readLine()) != null) {
-//            builder.append(line).append("\n");
-//        }
-//        try{
-//        System.out.println(builder.toString());
-//        JSONObject object = new JSONObject(builder.toString());
 
         String email = request.getParameter("email");
-        System.out.println(email);
+
         Part part = request.getPart("file");
-
-        // System.out.println(part.length());
-//            String email = object.getString("mail");
-//            System.out.println(email);
-
-
-        //Part part = (Part) object.get("data");
-        // Part part = request.getPart("data");
-
-
-        //     System.out.println(part);
 
         try {
             String foldername = email.substring(0, email.lastIndexOf("."));
@@ -59,12 +39,12 @@ public class FileUploaderServlet extends HttpServlet {
             double length = part.getSize();
             double megabyte = length / (1024 * 1024);
             DecimalFormat df = new DecimalFormat("#.##");
-            df.setRoundingMode(RoundingMode.CEILING);
             double megabyte1 = Double.parseDouble(df.format(megabyte));
             System.out.println(part.getSize());
             String size = String.valueOf(megabyte1).concat(" MB");
             String name = part.getSubmittedFileName();
             System.out.println(part.getSubmittedFileName());
+            System.out.println("content type"+part.getContentType());
 
             InputStream input = part.getInputStream();
             BufferedInputStream buffer = new BufferedInputStream(input);
@@ -84,13 +64,14 @@ public class FileUploaderServlet extends HttpServlet {
             HistoryUpdator historyUpdator = new HistoryUpdator();
             historyUpdator.updatingHistory(email, name, size, status);
 
+            FilesUploadtoRedfile filesUploadtoRedfile = new FilesUploadtoRedfile();
+            filesUploadtoRedfile.fileUploader(email,name);
+
 
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         } catch (ClassNotFoundException ex) {
             throw new RuntimeException(ex);
-
-
         }
 
     }

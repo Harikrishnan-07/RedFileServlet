@@ -4,6 +4,7 @@ import com.brimmatech.dao.DeletingService;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,26 +26,23 @@ public class FileDeletorServlet extends HttpServlet {
             System.out.println(builder.toString());
         }
         try {
-                JSONObject jsonObject = new JSONObject(builder.toString());
-                String  email = jsonObject.getString("emailId");
-                String foldername = email.substring(0, email.lastIndexOf("."));
-                String documentname = jsonObject.getString("docName");
+            JSONObject jsonObject = new JSONObject(builder.toString());
+            String email = jsonObject.getString("emailId");
+            String foldername = email.substring(0, email.lastIndexOf("."));
+            String documentname = jsonObject.getString("docName");
 
-                DeletingService deletingService = new DeletingService();
-                deletingService.fileDeletor(email, documentname);
+            DeletingService deletingService = new DeletingService();
+            deletingService.fileDeletor(email, documentname);
 
-                String path=("C:/Uploadedfiles/" + foldername+"/"+ documentname);
-                File deletefile = new File(path);
-                if(deletefile.exists()) {
-
-                    deletefile.delete();
-
-                }
-        } catch(SQLException e) {
-                 System.out.println("error");
-        }catch (JSONException e)
-        {
+            String path = ("C:/Uploadedfiles/" + foldername + "/" + documentname);
+            File deletefile = new File(path);
+            if (deletefile.exists()) {
+                deletefile.delete();
+            }
+        } catch (SQLException e) {
+            System.out.println("error");
+        } catch (JSONException e) {
             System.out.println("error");
         }
     }
-    }
+}
