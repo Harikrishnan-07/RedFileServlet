@@ -3,7 +3,7 @@ package com.brimmatech.servlet;
 
 import com.brimmatech.dao.FilesUploadtoRedfile;
 import com.brimmatech.dao.HistoryUpdator;
-
+import com.google.gson.Gson;
 
 
 import javax.servlet.ServletException;
@@ -23,7 +23,7 @@ import java.text.DecimalFormat;
 @MultipartConfig
 @WebServlet(urlPatterns = "/files")
 public class FileUploaderServlet extends HttpServlet {
-
+        Gson gson = new Gson();
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
@@ -40,11 +40,10 @@ public class FileUploaderServlet extends HttpServlet {
             double megabyte = length / (1024 * 1024);
             DecimalFormat df = new DecimalFormat("#.##");
             double megabyte1 = Double.parseDouble(df.format(megabyte));
-            System.out.println(part.getSize());
+
             String size = String.valueOf(megabyte1).concat(" MB");
             String name = part.getSubmittedFileName();
-            System.out.println(part.getSubmittedFileName());
-            System.out.println("content type"+part.getContentType());
+
 
             InputStream input = part.getInputStream();
             BufferedInputStream buffer = new BufferedInputStream(input);
@@ -61,12 +60,16 @@ public class FileUploaderServlet extends HttpServlet {
             }
             output.close();
 
+
             HistoryUpdator historyUpdator = new HistoryUpdator();
-            historyUpdator.updatingHistory(email, name, size, status);
+            historyUpdator.updatingHistory(email, name, size);
 
-            FilesUploadtoRedfile filesUploadtoRedfile = new FilesUploadtoRedfile();
-            filesUploadtoRedfile.fileUploader(email,name);
-
+            String userJsonString = this.gson.toJson("200");
+            PrintWriter out = response.getWriter();
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            out.print(userJsonString);
+            out.flush();
 
         } catch (SQLException ex) {
             throw new RuntimeException(ex);

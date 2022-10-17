@@ -4,82 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a3cfe39-56f4-4958-84db-d1d79bb2db8e" name="Changes" comment="Redfile changes">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FilesUploadtoRedfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileProcessedFilesList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6a3cfe39-56f4-4958-84db-d1d79bb2db8e" name="Changes" comment="Redfile changes added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/CurrentStatusCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDetectorClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/ProcessedFileHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileHistoryUpdator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/CurrentStatusServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/ProcessedFileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/ReceivedFileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/RedFileUploadServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/DeletingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/DeletingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDeletor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDeletor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FilesUploadtoRedfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FilesUploadtoRedfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/HistoryUpdator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/HistoryUpdator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/PaymentHistoryUpdator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/PaymentHistoryUpdator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/PaymentUpdator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/PaymentUpdator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileUploader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/Registration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/ValidatingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileUploader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileDeletorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileDeletorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileHistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileHistoryServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileUploaderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileUploaderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/RegistrationServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/Connection.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/DatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/DeletingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/FileDeletor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/FileHistoryClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/FileHistoryCollector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/HistoryUpdator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentHistoryUpdator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentUpdator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/RedfileUploader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/ValidatingService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileDeletorServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileHistoryServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileUploaderServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/ProceesedFileHistoryServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/RegistrationServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/checker-qual-3.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/gson-2.8.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/json-20220320.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/jsp-api-2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/jstl-api-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/postgresql-42.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/serializer-2.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/servlet-api-2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/xalan-2.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/lib/xml-apis-1.3.04.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/DatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/DeletingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/DeletingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/PaymentUpdatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/PaymentUpdatorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileDeletor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileDeletor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryCollector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryCollector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/HistoryUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/HistoryUpdator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/PaymentHistoryUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/PaymentHistoryUpdator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/PaymentUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/PaymentUpdator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/RedfileUploader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/RedfileUploader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/ValidatingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/ValidatingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/RedfileUploader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/ValidatingService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileDeletorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileDeletorServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileHistoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileHistoryServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileUploaderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileUploaderServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/ProceesedFileHistoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/ProceesedFileHistoryServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/RegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/RegistrationServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Redfile_dev_batch3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.HistoryUpdator" />
+    <configuration name="RedFileDetector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileDetector" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -152,8 +111,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentHistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.PaymentHistoryUpdator" />
+    <configuration name="RedFileDownloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileDownloader" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -165,8 +124,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedfileFolderCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedfileFolderCreator" />
+    <configuration name="RedFileHistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileHistoryUpdator" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -178,8 +137,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedfileProcessedFilesList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedfileProcessedFilesList" />
+    <configuration name="RedfileFolderTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedfileFolderTester" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -213,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RedFileHistoryUpdator" />
+        <item itemvalue="Application.RedFileDownloader" />
+        <item itemvalue="Application.RedFileDetector" />
+        <item itemvalue="Application.RedfileFolderTester" />
         <item itemvalue="Application.FilesUploadtoRedfile" />
-        <item itemvalue="Application.RedfileFolderCreator" />
-        <item itemvalue="Application.RedfileProcessedFilesList" />
-        <item itemvalue="Application.PaymentHistoryUpdator" />
-        <item itemvalue="Application.HistoryUpdator" />
       </list>
     </recent_temporary>
   </component>

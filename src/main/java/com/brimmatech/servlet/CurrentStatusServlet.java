@@ -1,10 +1,8 @@
 package com.brimmatech.servlet;
 
+import com.brimmatech.dao.CurrentStatusCollector;
 import com.brimmatech.dao.FileHistoryClass;
-import com.brimmatech.dao.FileHistoryCollector;
 import com.google.gson.Gson;
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,12 +12,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
-
-@WebServlet("/filehistory")
-public class FileHistoryServlet extends HttpServlet {
-    private Gson gson = new Gson();
-
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet("/currentstatus")
+public class CurrentStatusServlet extends HttpServlet {
+        Gson gson = new Gson();
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         StringBuilder builder = new StringBuilder();
         BufferedReader br = request.getReader();
@@ -27,13 +23,13 @@ public class FileHistoryServlet extends HttpServlet {
         while ((line = br.readLine()) != null) {
             builder.append(line).append("\n");
         }
-        String email = builder.toString().trim();
 
+            String email = builder.toString().trim();
 
-        FileHistoryCollector filesHistoryCollector = new FileHistoryCollector();
+        CurrentStatusCollector currentStatusCollector = new CurrentStatusCollector();
         try {
-            List<FileHistoryClass> list = filesHistoryCollector.historyCollector(email);
-            request.setAttribute("list", list);
+           List<FileHistoryClass> list = currentStatusCollector.statusCollector(email);
+
 
             String userJsonString = this.gson.toJson(list);
             PrintWriter out = response.getWriter();
@@ -43,10 +39,16 @@ public class FileHistoryServlet extends HttpServlet {
             out.print(userJsonString);
             out.flush();
 
-        } catch (SQLException | ClassNotFoundException e) {
+
+
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-
     }
+
+
+
+
+
 }
