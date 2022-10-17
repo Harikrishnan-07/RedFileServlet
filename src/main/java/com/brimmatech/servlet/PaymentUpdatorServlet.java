@@ -44,8 +44,6 @@ public class PaymentUpdatorServlet extends HttpServlet {
             List<FileHistoryClass> list = paymentHistoryUpdator.paidFiles(email);
             request.setAttribute("list", list);
 
-            RedfileUploader redfileUploader = new RedfileUploader();
-            redfileUploader.fileUploader(email,documentname);
 
         } catch (JSONException | SQLException e) {
             throw new RuntimeException(e);

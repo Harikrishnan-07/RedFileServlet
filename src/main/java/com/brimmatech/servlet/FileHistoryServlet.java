@@ -3,6 +3,7 @@ package com.brimmatech.servlet;
 import com.brimmatech.dao.FileHistoryClass;
 import com.brimmatech.dao.FileHistoryCollector;
 import com.google.gson.Gson;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,19 +15,19 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
-
 @WebServlet("/filehistory")
 public class FileHistoryServlet extends HttpServlet {
     private Gson gson = new Gson();
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         StringBuilder builder = new StringBuilder();
-        BufferedReader  br  = request.getReader();
+        BufferedReader br = request.getReader();
         String line;
         while ((line = br.readLine()) != null) {
             builder.append(line).append("\n");
         }
-        String email= builder.toString().trim();
+        String email = builder.toString().trim();
 
 
         FileHistoryCollector filesHistoryCollector = new FileHistoryCollector();
@@ -38,10 +39,11 @@ public class FileHistoryServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
+
             out.print(userJsonString);
             out.flush();
 
-        } catch (SQLException|ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 

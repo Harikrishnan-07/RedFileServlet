@@ -31,14 +31,13 @@ public class FileHistoryClass {
     private String documentName;
 
 
-
     public void setFilesize(String filesize) {
         this.filesize = filesize;
     }
 
     private String filesize;
 
-private String status;
+    private String status;
 
     public String getFilesize() {
         return filesize;

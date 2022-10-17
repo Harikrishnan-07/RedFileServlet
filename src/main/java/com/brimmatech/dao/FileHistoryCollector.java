@@ -13,10 +13,10 @@ public class FileHistoryCollector {
 
         List<FileHistoryClass> list = new LinkedList<>();
         Connection connection = DatabaseConnection.initializeDatabase();
-        String status = "Not paid" ;
-        PreparedStatement statement = connection.prepareStatement("Select * from uploadhistory where email=? and status=? ");
+
+        PreparedStatement statement = connection.prepareStatement("Select * from uploadhistory where email=? and status IS NULL");
         statement.setString(1, email);
-        statement.setString(2,status);
+
         ResultSet resultSet = statement.executeQuery();
 
         while (resultSet.next()) {

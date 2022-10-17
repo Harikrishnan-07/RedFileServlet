@@ -4,22 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a3cfe39-56f4-4958-84db-d1d79bb2db8e" name="Changes" comment="Redfile changes">
-      <change afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/ProceesedFileHistoryServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/ProceesedFileHistoryServlet.class" afterDir="false" />
+    <list default="true" id="6a3cfe39-56f4-4958-84db-d1d79bb2db8e" name="Changes" comment="Redfile changes added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/CurrentStatusCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDetectorClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/ProcessedFileHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedFileHistoryUpdator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/CurrentStatusServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/ProcessedFileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/ReceivedFileServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/RedFileUploadServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDeletor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileDeletor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FileHistoryCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FilesUploadtoRedfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/FilesUploadtoRedfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/HistoryUpdator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/HistoryUpdator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileFolderCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/dao/RedfileUploader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileDeletorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileDeletorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileHistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileHistoryServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileUploaderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/FileUploaderServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/FileDeletor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/FileDeletor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentHistoryUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentHistoryUpdator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/PaymentUpdator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/RedfileUploader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/dao/RedfileUploader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileDeletorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileDeletorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileUploaderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/FileUploaderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Redfile/WEB-INF/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/PaymentUpdatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brimmatech/servlet/PaymentUpdatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileDeletor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileDeletor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryCollector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/FileHistoryCollector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/HistoryUpdator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/HistoryUpdator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/RedfileUploader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/Registration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/dao/ValidatingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileDeletorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileDeletorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileHistoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileHistoryServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileUploaderServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/FileUploaderServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/PaymentUpdatorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/brimmatech/servlet/RegistrationServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +53,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Redfile_dev_batch3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2CTdFt19JNbgdfCw5RAcHA4JkGQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,16 +76,17 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/asvin/IdeaProjects/Redfile&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Smart Tomcat.Tomcat 9">
-    <configuration name="HistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.HistoryUpdator" />
+    <configuration name="FilesUploadtoRedfile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.FilesUploadtoRedfile" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -70,8 +98,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentHistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.PaymentHistoryUpdator" />
+    <configuration name="RedFileDetector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileDetector" />
+      <module name="Redfile" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brimmatech.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedFileDownloader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileDownloader" />
+      <module name="Redfile" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brimmatech.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedFileHistoryUpdator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedFileHistoryUpdator" />
+      <module name="Redfile" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brimmatech.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedfileFolderTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brimmatech.dao.RedfileFolderTester" />
       <module name="Redfile" />
       <extension name="coverage">
         <pattern>
@@ -105,8 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PaymentHistoryUpdator" />
-        <item itemvalue="Application.HistoryUpdator" />
+        <item itemvalue="Application.RedFileHistoryUpdator" />
+        <item itemvalue="Application.RedFileDownloader" />
+        <item itemvalue="Application.RedFileDetector" />
+        <item itemvalue="Application.RedfileFolderTester" />
+        <item itemvalue="Application.FilesUploadtoRedfile" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660216793154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Redfile changes">
+      <created>1660640177357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660640177357</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
